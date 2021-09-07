@@ -1,3 +1,3 @@
-# Headline
+# Main
 
-> An awesome project.
+> Main Directory
