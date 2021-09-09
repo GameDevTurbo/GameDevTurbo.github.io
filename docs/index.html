@@ -13,13 +13,28 @@
 <script>
     window.$docsify = {
         loadSidebar: true,
+        coverpage: true,
         // loadSidebar: 'sideBar.md',
-        subMaxLevel: 2,
+
+        loadNavbar : false, // IMPORTANT
+        changelog : 'CHANGELOG.md', // path of your changelog, it can be remote as well
+        
         name: '',
         repo: ''
     }
 </script>
 <!-- Docsify v4 -->
 <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+
+<link
+        rel="stylesheet"
+        href="//cdn.jsdelivr.net/npm/docsify-changelog-plugin@latest/dist/style.css"
+/>
+<link
+        rel="stylesheet"
+        href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/docsify-changelog-plugin@latest/dist/index.js"></script>
 </body>
 </html>
