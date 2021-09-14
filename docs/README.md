@@ -15,11 +15,11 @@
 - 工作的话，主要进行商业休闲游戏开发
 
 #### 个人技术栈
-- C# + Unity
+- C# & Unity
     - 休闲游戏
-- 原生开发 Android + Object-c
+- 原生开发：Android & Objective-C
     - SDK接入
-- TS + CocosCreator
+- TS & CocosCreator
     - H5休闲游戏
 
 
