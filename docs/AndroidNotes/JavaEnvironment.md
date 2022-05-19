@@ -1,8 +1,11 @@
 ﻿# <center>环境部署
+
 ---
 
 # 安装JDK
+
 ### 参考文档
+
 > [参考文档 - 菜鸟教程](https://www.runoob.com/java/java-environment-setup.html) 
 
 ##### 安装步骤
@@ -27,9 +30,9 @@
         Java HotSpot(TM) Client VM (build 25.261-b12, mixed mode, sharing)
         ```
 
-            
+        ​    
 ---
-     
+
 # 安装SDK
  > [参考文档 - 菜鸟教程](https://www.runoob.com/java/java-environment-setup.html)
 
