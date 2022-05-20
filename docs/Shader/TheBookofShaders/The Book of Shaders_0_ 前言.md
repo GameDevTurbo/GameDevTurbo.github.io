@@ -4,9 +4,9 @@
 
 > 这是一本关于 Fragment Shaders（片段着色器）的入门指南，它将一步一步地带你领略其中的纷繁与抽象。
 
-## 目录
+##   目录
 
-开始:
+开始: 
 
     什么是片段着色器（Fragment Shader）？
     “Hello world!”
