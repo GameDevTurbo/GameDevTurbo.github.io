@@ -10,7 +10,7 @@
 
 想象你的 CPU 是一个大的工业管道，然后每一个任务都是通过这个管道的某些东西 —— 就像一个生产流水线那样。
 
-![CPU](https://raw.githubusercontent.com/GameDevTurbo/ResHub/main/picGoGoGo/00.jpeg)
+<img src="https://raw.githubusercontent.com/GameDevTurbo/ResHub/main/picGoGoGo/00.jpeg" alt="CPU" style="zoom:50%;" />
 
 
 
@@ -24,7 +24,7 @@
 
 屏幕上的每个像素都代表一个最简单的任务。单独来看完成任何一个像素的任务对 CPU 来说都很容易，那么问题来了，屏幕上的每一个像素都需要解决这样的小任务！也就是说，哪怕是对于一个老式的屏幕（分辨率 800x600）来说，都需要每帧处理480000个像素，即每秒进行14400000次计算！是的，这对于微处理器就是大问题了！而对于一个现代的 2800x1800 视网膜屏，每秒运行60帧，就需要每秒进行311040000次计算。
 
-![img](https://raw.githubusercontent.com/GameDevTurbo/ResHub/main/picGoGoGo/03.jpeg)
+<img src="https://raw.githubusercontent.com/GameDevTurbo/ResHub/main/picGoGoGo/03.jpeg" alt="img" style="zoom:50%;" />
 
 
 
@@ -32,7 +32,7 @@
 
 
 
-![GPU](https://raw.githubusercontent.com/GameDevTurbo/ResHub/main/picGoGoGo/04.jpeg)
+<img src="https://raw.githubusercontent.com/GameDevTurbo/ResHub/main/picGoGoGo/04.jpeg" alt="GPU" style="zoom:50%;" />
 
 
 
