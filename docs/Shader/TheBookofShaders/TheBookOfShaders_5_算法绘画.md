@@ -35,7 +35,7 @@ void main() {
 }
 ```
 
-
+![下载 (2)](https://raw.githubusercontent.com/GameDevTurbo/ResHub/main/picGoGoGo/下载 (2).png)
 
 你可以通过 `float` 快速赋值  `r,g,b`  三个通道
 
@@ -54,6 +54,10 @@ vec4 fColor2 = vec4(color.x,color.y,color.z,1.0);
 // fColor = fColor2
 gl_FragColor = fColor;
 ```
+
+
+
+
 
 
 
@@ -87,6 +91,10 @@ void main() {
 }
 ```
 
+
+
+![下载 (1)](https://raw.githubusercontent.com/GameDevTurbo/ResHub/main/picGoGoGo/%E4%B8%8B%E8%BD%BD%20(1).png)
+
 [`pow()`](https://thebookofshaders.com/glossary/?search=pow) （求x的y次幂）是 GLSL 的一个原生函数，GLSL 有很多原生函数。大多数原生函数都是硬件加速的。
 
 当你用 Pi 来玩的时候有些方程会变得更有趣。在第 5 行我定义了一个宏，使得每当程序调用 `PI` 的时候就用 `3.14159265359` 来替换它。
@@ -99,7 +107,11 @@ void main() {
 
 ###### Step
 
-[`step()`](https://thebookofshaders.com/glossary/?search=step) 插值函数需要输入两个参数。第一个是极限或阈值，第二个是我们想要检测或通过的值。对任何小于阈值的值，返回 `0.0`，大于阈值，则返回 `1.0`。
+[`step()`](https://thebookofshaders.com/glossary/?search=step) 插值函数需要输入两个参数。
+
+第一个是极限或阈值，第二个是我们想要检测或通过的值。
+
+对任何小于阈值的值，返回 `0.0`，大于阈值，则返回 `1.0`。
 
 ```glsl
 #ifdef GL_ES
@@ -132,11 +144,17 @@ void main() {
 }
 ```
 
+![下载](https://raw.githubusercontent.com/GameDevTurbo/ResHub/main/picGoGoGo/%E4%B8%8B%E8%BD%BD.png)
+
 
 
 #####  Smoothstep
 
-另一个 GLSL 的特殊函数是 [`smoothstep()`](https://thebookofshaders.com/glossary/?search=smoothstep)。当给定一个范围的上下限和一个数值，这个函数会在已有的范围内给出插值。前两个参数规定转换的开始和结束点，第三个是给出一个值用来插值。
+另一个 GLSL 的特殊函数是 [`smoothstep()`](https://thebookofshaders.com/glossary/?search=smoothstep)。
+
+当给定一个范围的上下限和一个数值，这个函数会在已有的范围内给出插值。
+
+前两个参数规定转换的开始和结束点，第三个是给出一个值用来插值。
 
 ```glsl
 #ifdef GL_ES
@@ -169,8 +187,27 @@ void main() {
 }
 ```
 
+![image-20220521145106267](https://raw.githubusercontent.com/GameDevTurbo/ResHub/main/picGoGoGo/image-20220521145106267.png)
 
+
+
+```glsl
+  float y = smoothstep(0.2,0.5,st.x) - smoothstep(0.5,0.8,st.x);
+```
+
+> 用它替换上面的第 20 行，把它想成是一个垂直切割。背景看起来很像一条线，不是吗？
+
+![image-20220521145012575](https://raw.githubusercontent.com/GameDevTurbo/ResHub/main/picGoGoGo/image-20220521145012575.png)
 
 
 
 ## 造型函数进阶
+
+
+
+
+
+
+
+
+
