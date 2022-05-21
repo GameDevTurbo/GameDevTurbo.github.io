@@ -14,6 +14,7 @@
         * [Hello World](/Shader/TheBookofShaders/TheBookOfShaders_2_HelloWorld)
         * [Uniforms](/Shader/TheBookofShaders/TheBookOfShaders_3_Uniforms)
         * [运行你的shader](/Shader/TheBookofShaders/TheBookOfShaders_4_运行你的shader)
+        * [算法绘画](/Shader/TheBookofShaders/TheBookOfShaders_5_算法绘画)
 * **Android**
     * [Java 开发环境配置](/AndroidNotes/JavaEnvironment)
     * [与Unity进行交互](/AndroidNotes/UniWithAndroid)
