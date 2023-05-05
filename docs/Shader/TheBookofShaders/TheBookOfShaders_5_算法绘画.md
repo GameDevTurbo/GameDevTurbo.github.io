@@ -4,7 +4,17 @@
 
 ## 造型函数
 
+接下来的代码结构就是我们的基本功。
 
+在它之中我们对**归一化**的 x 坐标（`st.x`）进行可视化。
+
+有两种途径：
+
+- 用亮度（度量从黑色到白色的渐变过程）
+
+- 在顶层绘制一条绿色的线（在这种情况下 x 被直接赋值给 y）。
+
+不用过分在意**plot**函数，我们马上会更加详细地解释它。
 
 ```glsl
 #ifdef GL_ES
@@ -37,11 +47,13 @@ void main() {
 
 <img src="https://raw.githubusercontent.com/GameDevTurbo/ResHub/main/picGoGoGo/下载 (2).png" alt="下载 (2)" style="zoom:50%;" />
 
+
+
+【基本功】
+
 你可以通过 `float` 快速赋值  `r,g,b`  三个通道
 
 同样，你可以用 `vec3` 快速赋值 `vec4` 的  `r,g,b ` 三个通道
-
-
 
 ```glsl
  float y = st.x;
@@ -55,11 +67,15 @@ vec4 fColor2 = vec4(color.x,color.y,color.z,1.0);
 gl_FragColor = fColor;
 ```
 
+---
 
 
 
+*x*和*y* （或亮度）之间的这种一对一关系 称为*线性插值*。
 
+从这里我们可以使用一些数学函数来*塑造*线条。
 
+例如，我们可以提高*x*的 5 次方来制作一条*曲线*。
 
 ```glsl
 #ifdef GL_ES
@@ -93,9 +109,17 @@ void main() {
 
 <img src="https://raw.githubusercontent.com/GameDevTurbo/ResHub/main/picGoGoGo/%E4%B8%8B%E8%BD%BD%20(1).png" alt="下载 (1)" style="zoom:50%;" />
 
-[`pow()`](https://thebookofshaders.com/glossary/?search=pow) （求x的y次幂）是 GLSL 的一个原生函数，GLSL 有很多原生函数。大多数原生函数都是硬件加速的。
+---
 
-当你用 Pi 来玩的时候有些方程会变得更有趣。在第 5 行我定义了一个宏，使得每当程序调用 `PI` 的时候就用 `3.14159265359` 来替换它。
+
+
+[`pow()`](https://thebookofshaders.com/glossary/?search=pow) （求x的y次幂）是 GLSL 的一个原生函数，GLSL 有很多原生函数。
+
+大多数原生函数都是硬件加速的。
+
+当你用 Pi 来玩的时候有些方程会变得更有趣。
+
+在第 5 行我定义了一个宏，使得每当程序调用 `PI` 的时候就用 `3.14159265359` 来替换它。
 
 
 

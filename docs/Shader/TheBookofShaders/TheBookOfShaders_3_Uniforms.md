@@ -30,7 +30,11 @@ uniform vec2 u_mouse;      // 鼠标位置（在屏幕上哪个像素）
 uniform float u_time;     // 时间（加载后的秒数）
 ```
 
-虽然这些 uniforms 的名字千奇百怪，但是在这一系列的例子中我一直有用到：`u_time` （时间）, `u_resolution` （画布尺寸）和 `u_mouse` （鼠标位置）。
+虽然这些 uniforms 的名字千奇百怪，但是在这一系列的例子中我一直有用到：
+
+- `u_time` （时间）
+- `u_resolution` （画布尺寸）
+- `u_mouse` （鼠标位置）
 
 按业界传统应在 uniform 值的名字前加 `u_` ，这样一看即知是 uniform。
 
@@ -61,7 +65,9 @@ void main() {
 
 
 
-GLSL 还有更多惊喜。GPU 的硬件加速支持我们使用角度，三角函数和指数函数。
+GLSL 还有更多惊喜。
+
+GPU 的硬件加速支持我们使用**角度**，**三角函数**和**指数函数**。
 
 这里有一些这些函数的介绍：[`sin()`](https://thebookofshaders.com/glossary/?search=sin), [`cos()`](https://thebookofshaders.com/glossary/?search=cos), [`tan()`](https://thebookofshaders.com/glossary/?search=tan), [`asin()`](https://thebookofshaders.com/glossary/?search=asin), [`acos()`](https://thebookofshaders.com/glossary/?search=acos), [`atan()`](https://thebookofshaders.com/glossary/?search=atan), [`pow()`](https://thebookofshaders.com/glossary/?search=pow), [`exp()`](https://thebookofshaders.com/glossary/?search=exp), [`log()`](https://thebookofshaders.com/glossary/?search=log), [`sqrt()`](https://thebookofshaders.com/glossary/?search=sqrt), [`abs()`](https://thebookofshaders.com/glossary/?search=abs), [`sign()`](https://thebookofshaders.com/glossary/?search=sign), [`floor()`](https://thebookofshaders.com/glossary/?search=floor), [`ceil()`](https://thebookofshaders.com/glossary/?search=ceil), [`fract()`](https://thebookofshaders.com/glossary/?search=fract), [`mod()`](https://thebookofshaders.com/glossary/?search=mod), [`min()`](https://thebookofshaders.com/glossary/?search=min), [`max()`](https://thebookofshaders.com/glossary/?search=max) 和 [`clamp()`](https://thebookofshaders.com/glossary/?search=clamp)。
 
@@ -87,11 +93,15 @@ void main() {
 }
 ```
 
+---
+
+
+
 
 
 ## **gl_FragCoord**
 
-就像 GLSL 有个默认输出值 `vec4 gl_FragColor` 一样，它也有一个默认输入值（ `vec4 gl_FragCoord` ）。
+就像 GLSL 有个默认输出值 `gl_FragColor:vec4` 一样，有一个默认输入值`gl_FragCoord:vec4` 
 
 `gl_FragCoord`存储了活动线程正在处理的**像素**或**屏幕碎片**的坐标。
 
@@ -105,7 +115,7 @@ void main() {
 
 
 
-#### ****归一化****
+#### **归一化**
 
 ```glsl
 #ifdef GL_ES
@@ -122,7 +132,7 @@ void main() {
 }
 ```
 
-上述代码中我们用 `gl_FragCoord.xy` 除以 `u_resolution`，对坐标进行了**规范化**。
+上述代码中我们用 `gl_FragCoord.xy` 除以 `u_resolution`，对坐标进行了**归一化**。
 
 这样做是为了使所有的值落在 `0.0` 到 `1.0` 之间，这样就可以轻松把 X 或 Y 的值映射到红色或者绿色通道。
 
@@ -137,7 +147,7 @@ void main() {
 
 我的测试方案如下：
 
-1. 先设定好gl_FragColor，比如我要查询（1，1）坐标，则值为vec4(1,1,0,1.0); 并记录当前颜色
+1. 先设定好gl_FragColor，比如我要查询（1,1）坐标，则值为vec4(1,1,0,1.0); 并记录当前颜色
 
 2. 鼠标值归一化变化到记录的颜色，就可以知道画布的具体坐标。
 
