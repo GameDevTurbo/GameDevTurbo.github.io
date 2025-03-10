@@ -21,8 +21,8 @@
         * [颜色](/Shader/TheBookofShaders/TheBookOfShaders_6_颜色)
         * [形状](/Shader/TheBookofShaders/TheBookOfShaders_7_形状)
 * **Android**
-    * [Java 开发环境配置](/AndroidNotes/JavaEnvironment)
-    * [与Unity进行交互](/AndroidNotes/UniWithAndroid)
+    * [Java 开发环境配置](/Android/JavaEnvironment)
+    * [与Unity进行交互](/Android/UniWithAndroid)
 * **[HotFix](/HotFix/README.md)**
 	* **AssetBundle**
 		* [简介](/HotFix/AssetBundle/AssetBundle_0_简介)
