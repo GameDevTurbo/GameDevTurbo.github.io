@@ -1,6 +1,4 @@
-# 
-
-什么是 Fragment Shader(片段着色器)？
+# 什么是 Fragment Shader(片段着色器)？
 
 
 
